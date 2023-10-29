@@ -1,0 +1,14 @@
+hw1/allennlp/
+hw1/elmo_git/
+hw1/glove/
+hw1/HW1_dataset/
+hw1/models/
+hw1/safari/
+hw1/vocabulary/
+hw1/__pycache__/
+*.html
+*.txt
+*.csv
+*.deb
+*.npy
+hw1/elmo_embedding/
