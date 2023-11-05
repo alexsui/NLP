@@ -97,7 +97,7 @@ class KaggleModel(nn.Module):
         self.dense2 = nn.Linear(hidden_dim, num_classes)
 
     def forward(self, x):
-        x = self.dropout(x.permute(0,2,1)).permute((0,2,1))  # Apply dropout
+        x = self.spatial_dropout(x.permute(0,2,1)).permute((0,2,1))  # Apply dropout
         
         x, _ = self.bi_gru(x)
         # x, _ = self.bi_gru_2(x)

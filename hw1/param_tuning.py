@@ -31,9 +31,9 @@ def objective(trial):
     # Generate the hyperparameters to be tuned
     # lr = 10**trial.suggest_int('logval', -5, -2)
     lr = trial.suggest_loguniform('lr', 1e-6, 1e-3)
-    batch_size = trial.suggest_categorical('batch_size', [16, 32, 64,128,256])
+    batch_size = trial.suggest_categorical('batch_size', [32, 64,128,256,512])
     num_layers = trial.suggest_int('num_layers', 1, 3, step=1) 
-    hidden_size= trial.suggest_int('hidden_size', 64, 512, step=64)
+    hidden_size= trial.suggest_int('hidden_size',128, 1024, step=128)
     dropout = trial.suggest_float('dropout', 0.1, 0.4,step=0.1)
     # is_attention = trial.suggest_categorical('is_attention', [True, False])
     bidirectional = trial.suggest_categorical('bidirectional', [True, False])
@@ -50,11 +50,11 @@ def objective(trial):
     opt = Lion(model.parameters(), lr=lr)
     # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, patience=10, verbose=True)
     trainer = Trainer(model,opt=opt, device = device, lambda_ = lambda_)
-    res = trainer.train(epochs= EPOCHs, train_dataloader=train_dataloader, val_dataloader=val_dataloader, patience=5, model_name="trial", scheduler=None)
+    res = trainer.train(epochs= EPOCHs, train_dataloader=train_dataloader, val_dataloader=val_dataloader, patience=1000, model_name="trial", scheduler=None)
     return max(res['val_acc'])
 # Optimize the hyperparameters using Optuna
 study = optuna.create_study(direction='maximize')  # or 'minimize' based on your goal
-study.optimize(objective, n_trials=350)
+study.optimize(objective, n_trials=500)
 
 # Get the best parameters
 best_params = study.best_params

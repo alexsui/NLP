@@ -44,13 +44,13 @@ class myDataset(Dataset):
             self.val_label = np.load("./elmo_y_val.npy", allow_pickle=True)
             self.val_label = np.vstack(self.val_label)
         elif self.kind == "elmo_new":
-            self.train_embedding = np.load("./elmo_embedding/new_preprocess_elmo_X_train.npy", allow_pickle=True)
-            self.val_embedding = np.load("./elmo_embedding/new_preprocess_elmo_X_val.npy", allow_pickle=True)
-            self.test_embedding = np.load("./elmo_embedding/new_preprocess_elmo_X_test.npy", allow_pickle=True)
-            self.train_label = np.load("./elmo_embedding/new_preprocess_elmo_y_train.npy", allow_pickle=True)
-            self.val_label = np.load("./elmo_embedding/new_preprocess_elmo_y_val.npy", allow_pickle=True)
-        self.tokenizer = tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True,
-                               reduce_len=True)
+            self.train_embedding = np.load("./elmo_embedding/new_preprocess_noAnotate_elmo_X_train.npy", allow_pickle=True)
+            self.val_embedding = np.load("./elmo_embedding/new_preprocess_noAnotate_elmo_X_val.npy", allow_pickle=True)
+            self.test_embedding = np.load("./elmo_embedding/new_preprocess_noAnotate_elmo_X_test.npy", allow_pickle=True)
+            self.train_label = np.load("./elmo_embedding/new_preprocess_noAnotate_elmo_y_train.npy", allow_pickle=True)
+            self.val_label = np.load("./elmo_embedding/new_preprocess_noAnotate_elmo_y_val.npy", allow_pickle=True)
+        # self.tokenizer = tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True,
+        #                        reduce_len=True)
     def convert_text_to_input_ids(self, text,pad_to_len):
         words = text[:pad_to_len]
         pad_len = pad_to_len - len(words)
