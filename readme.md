@@ -1,5 +1,6 @@
 # NLP
 ## HW1 - Multi-label Classification in NLP
+* **排名:** 11th/45
 * **描述 :** 給予twitter tweet，每個tweet都有一到多個concern，目標是為這些tweet進行concern分類
 * **限制 :** 不可使用transformer-based model
 * **嘗試的方法 :** 
