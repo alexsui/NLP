@@ -40,3 +40,14 @@
     **相關資源:** 
     https://blog.csdn.net/jasminefeng/article/details/119642221
         
+## HW2 - Utterance classification
+* **描述 :** 
+You are given several conversations between doctor and patient.
+Each utterance in the conversation belongs to one (or more) classes.
+Goal: Use any model (including transformers, LLM, …) to accurately predict the utterances.
+## HW3 - Machine Reading Comprehension
+* **描述 :** 給予中文問題，透過模型進行回答
+* **模型 :** Mistral-7b
+## Final Project
+* **描述 :** You are given a question and the current situation. Please judge the quality of the response.
+![image](https://github.com/alexsui/NLP/assets/53047989/0c242efc-3f5a-42ee-bb7c-3e58a5753000)
