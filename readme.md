@@ -42,8 +42,8 @@
         
 ## HW2 - Utterance classification
 * **描述 :** 
-You are given several conversations between doctor and patient.
-Each utterance in the conversation belongs to one (or more) classes.
+You are given several conversations between the doctor and the patient.
+Each utterance in the conversation belongs to one (or more) class.
 Goal: Use any model (including transformers, LLM, …) to accurately predict the utterances.
 ## HW3 - Machine Reading Comprehension
 * **描述 :** 給予中文問題，透過模型進行回答
@@ -53,6 +53,6 @@ Goal: Use any model (including transformers, LLM, …) to accurately predict the
 * **方法 :**
      使用Mistral以及LLamma等LLＭ模型進行實驗，採用兩種方法：
      (1)Prompt engineering
-     (2)Fintuning
+     (2)Finetuning
      
 ![image](https://github.com/alexsui/NLP/assets/53047989/0c242efc-3f5a-42ee-bb7c-3e58a5753000)
