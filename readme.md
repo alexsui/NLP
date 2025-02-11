@@ -51,7 +51,7 @@ Goal: Use any model (including transformers, LLM, …) to accurately predict the
 ## Final Project
 * **描述 :** You are given a question and the current situation. Please judge the quality of the response.
 * **方法 :**
-     使用Mistral以及LLamma等LLＭ模型進行實驗，採用兩種方法：
+     使用Mistral LLＭ模型進行實驗，採用兩種方法：
      (1)Prompt engineering
      (2)Finetuning
      
