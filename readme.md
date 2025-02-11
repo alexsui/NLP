@@ -50,4 +50,9 @@ Goal: Use any model (including transformers, LLM, …) to accurately predict the
 * **模型 :** Mistral-7b
 ## Final Project
 * **描述 :** You are given a question and the current situation. Please judge the quality of the response.
+* **方法 :**
+     使用Mistral以及LLamma等LLＭ模型進行實驗，採用兩種方法：
+     (1)Prompt engineering
+     (2)Fintuning
+     
 ![image](https://github.com/alexsui/NLP/assets/53047989/0c242efc-3f5a-42ee-bb7c-3e58a5753000)
